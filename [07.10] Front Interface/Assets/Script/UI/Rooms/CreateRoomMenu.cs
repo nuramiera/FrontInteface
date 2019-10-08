@@ -15,6 +15,9 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
     private RoomCanvases _roomCanvases;
     public SteamVR_LaserPointer laserPointer;
 
+    //public GameObject PanelTesting;
+         
+
     void Awake()
     {
         laserPointer.PointerClick += PointerClick;
@@ -48,19 +51,27 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
 
             PhotonNetwork.CreateRoom(_RoomName.text, new RoomOptions { MaxPlayers = 4 }, null);
             Debug.Log("Create Room success");
-           // _roomCanvases.CurrentRoomCanvas.Show();
+            //PanelTesting.SetActive(true);
+            //_roomCanvases.CurrentRoomCanvas.Show();
+            
         }
 
 
         /*RoomOptions options = new RoomOptions();
         options.MaxPlayers = 4;
         PhotonNetwork.JoinOrCreateRoom(_RoomName.text, options, TypedLobby.Default);*/
-
-        
+             
 
     }
 
-    
+    public override void OnCreatedRoom()
+   {
+       Debug.Log("Created room successfully.", this);
+       _roomCanvases.CurrentRoomCanvas.Show();
+   }
+
+
+
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {

@@ -6,8 +6,10 @@ using Photon.Realtime;
 
 public class TestConnect : MonoBehaviourPunCallbacks
 {
+    private RoomCanvases _roomCanvases;
+
     // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
         Debug.Log("Connecting to Server...");
         PhotonNetwork.AutomaticallySyncScene = true;
@@ -27,6 +29,33 @@ public class TestConnect : MonoBehaviourPunCallbacks
             //PhotonNetwork.JoinLobby();
             PhotonNetwork.JoinLobby(TypedLobby.Default);
         //}
+    }
+
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        Debug.Log("Failed to connect to Self-hosted server " + cause.ToString(), this);
+    }
+
+    public override void OnJoinedLobby()
+    {
+        Debug.Log("Joined lobby.");
+    }*/
+
+    private void Start()
+    {
+        Debug.Log("Connecting to Server...");
+        PhotonNetwork.ConnectUsingSettings();
+    }
+
+    private void Awake()
+    {
+        PhotonNetwork.AutomaticallySyncScene = true;
+    }
+
+    public override void OnConnecttoServer()
+    {
+        PhotonNetwork.JoinLobby(TypedLobby.Default);
+
     }
 
     public override void OnDisconnected(DisconnectCause cause)
