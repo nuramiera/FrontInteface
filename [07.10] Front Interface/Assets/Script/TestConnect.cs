@@ -44,6 +44,7 @@ public class TestConnect : MonoBehaviourPunCallbacks
     private void Start()
     {
         Debug.Log("Connecting to Server...");
+        PhotonNetwork.NickName = MasterManager.GameSettings.Nickname;
         PhotonNetwork.ConnectUsingSettings();
     }
 
@@ -54,6 +55,7 @@ public class TestConnect : MonoBehaviourPunCallbacks
 
     public override void OnConnecttoServer()
     {
+        Debug.Log("Player Name : " + PhotonNetwork.NickName);
         PhotonNetwork.JoinLobby(TypedLobby.Default);
 
     }
@@ -63,8 +65,8 @@ public class TestConnect : MonoBehaviourPunCallbacks
         Debug.Log("Failed to connect to Self-hosted server " + cause.ToString(), this);
     }
 
-    public override void OnJoinedLobby()
+    /*public override void OnJoinedLobby()
     {
         Debug.Log("Joined lobby.");
-    }
+    }*/
 }

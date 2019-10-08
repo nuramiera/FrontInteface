@@ -49,18 +49,22 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
         {
             //return;
 
-            PhotonNetwork.CreateRoom(_RoomName.text, new RoomOptions { MaxPlayers = 4 }, null);
-            Debug.Log("Create Room success");
+            //PhotonNetwork.CreateRoom(_RoomName.text, new RoomOptions { MaxPlayers = 4 }, null);
+            // Debug.Log("Create Room success");
             //PanelTesting.SetActive(true);
             //_roomCanvases.CurrentRoomCanvas.Show();
-            
-        }
-
-
-        /*RoomOptions options = new RoomOptions();
+            /*RoomOptions options = new RoomOptions();
         options.MaxPlayers = 4;
         PhotonNetwork.JoinOrCreateRoom(_RoomName.text, options, TypedLobby.Default);*/
-             
+
+        }
+        RoomOptions options = new RoomOptions();
+        options.MaxPlayers = 4;
+        PhotonNetwork.JoinOrCreateRoom(_RoomName.text, options, TypedLobby.Default);
+
+
+
+
 
     }
 

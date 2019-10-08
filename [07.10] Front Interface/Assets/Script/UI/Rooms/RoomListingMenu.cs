@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime;
+using Photon.Realtime; 
 
 public class RoomListingMenu : MonoBehaviourPunCallbacks
 {
@@ -25,7 +25,7 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
          _content.DestroyChildren();
          _listing.Clear();
 
-        Debug.Log("Override Joined Room ");
+        Debug.Log("Room Listing Menu : Override Joined Room ");
     }
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)

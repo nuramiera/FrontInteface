@@ -42,7 +42,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         }
     }
 
-    public override void OnConnected()
+    public override void OnConnecttoServer()
     {
         PhotonNetwork.JoinLobby(TypedLobby.Default);
         PhotonNetwork.LoadLevel("Rooms");

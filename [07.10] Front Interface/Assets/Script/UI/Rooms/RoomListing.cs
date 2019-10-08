@@ -17,10 +17,10 @@ public class RoomListing : MonoBehaviour
     //public GameObject PanelTesting;
 
 
-    void Awake()
+    /*void Awake()
     {
         laserPointer.PointerClick += PointerClick;
-    }
+    }*/
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
@@ -43,5 +43,6 @@ public class RoomListing : MonoBehaviour
     public void OnClick_Button()
     {
         PhotonNetwork.JoinRoom(RoomInfo.Name);
+        Debug.Log("Room Listing Menu : Join Room");
     }
 }
