@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
-using Photon.Realtime; 
+using Photon.Realtime;
+using UnityEngine.UI;
 
 public class RoomListingMenu : MonoBehaviourPunCallbacks
 {
@@ -11,13 +12,15 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
     [SerializeField]
     private RoomListing _roomListing;
 
+    
+
     private List<RoomListing> _listing = new List<RoomListing>();
     private RoomCanvases _roomCanvases;
 
     public void FirstInitialize(RoomCanvases canvases)
     {
         _roomCanvases = canvases;
-    }
+    }   
 
     public override void OnJoinedRoom()
     {

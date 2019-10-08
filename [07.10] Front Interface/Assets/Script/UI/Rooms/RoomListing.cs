@@ -24,7 +24,7 @@ public class RoomListing : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "RoomListing")
+        if (e.target.name == "ScrollView")
         {
             Debug.Log("Room Listing was clicked");
             OnClick_Button();

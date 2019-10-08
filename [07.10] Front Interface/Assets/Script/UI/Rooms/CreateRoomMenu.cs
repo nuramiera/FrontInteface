@@ -11,13 +11,14 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     private Text _RoomName;
+    private GameObject ScrollView;
 
     private RoomCanvases _roomCanvases;
     public SteamVR_LaserPointer laserPointer;
 
-    //public GameObject PanelTesting;
-         
 
+
+    
     void Awake()
     {
         laserPointer.PointerClick += PointerClick;
@@ -29,7 +30,7 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
         {
             Debug.Log("Keyboard was clicked");
         }
-        else if (e.target.name == "Button")
+        else if (e.target.name == "CreateRoom")
         {
             Debug.Log("Button was clicked : Create Room Menu");
             OnClick_CreateRoom();
@@ -40,6 +41,12 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
     {
         _roomCanvases = canvases;
     }
+    
+
+    /*public void OnCLick_JoinRoom()
+    {
+        //what the controller click 
+    }*/
 
     public void OnClick_CreateRoom()
     {
@@ -49,22 +56,16 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
         {
             //return;
 
-            //PhotonNetwork.CreateRoom(_RoomName.text, new RoomOptions { MaxPlayers = 4 }, null);
-            // Debug.Log("Create Room success");
+            PhotonNetwork.CreateRoom(_RoomName.text, new RoomOptions { MaxPlayers = 4 }, null);
+            Debug.Log("Create Room success" + _RoomName.text );
             //PanelTesting.SetActive(true);
             //_roomCanvases.CurrentRoomCanvas.Show();
-            /*RoomOptions options = new RoomOptions();
-        options.MaxPlayers = 4;
-        PhotonNetwork.JoinOrCreateRoom(_RoomName.text, options, TypedLobby.Default);*/
+
 
         }
-        RoomOptions options = new RoomOptions();
+        /*RoomOptions options = new RoomOptions();
         options.MaxPlayers = 4;
-        PhotonNetwork.JoinOrCreateRoom(_RoomName.text, options, TypedLobby.Default);
-
-
-
-
+        PhotonNetwork.JoinOrCreateRoom(_RoomName.text, options, TypedLobby.Default);*/
 
     }
 
@@ -73,9 +74,6 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
        Debug.Log("Created room successfully.", this);
        _roomCanvases.CurrentRoomCanvas.Show();
    }
-
-
-
 
     public override void OnCreateRoomFailed(short returnCode, string message)
     {

@@ -5,7 +5,8 @@ using Photon.Pun;
 using Valve.VR.Extras;
 using Valve.VR.InteractionSystem;
 
-public class LeaveRoomMenu : MonoBehaviour
+
+public class Testing : MonoBehaviour
 {
     private RoomCanvases _roomCanvas;
     public SteamVR_LaserPointer laserPointer;
@@ -21,25 +22,21 @@ public class LeaveRoomMenu : MonoBehaviour
         {
             Debug.Log("Keyboard was clicked");
         }
-        else if (e.target.name == "LeaveRoomMenu")
+        else if (e.target.name == "StartGame")
         {
-            Debug.Log("Button was clicked : Leave Room Menu");
-            OnClick_LeaveRoom();
+            Debug.Log("Button was clicked : Module");
+            OnClick_StartGame();
         }
     }
 
 
-        public void FirstInitialize (RoomCanvases canvases)
+    public void FirstInitialize(RoomCanvases canvases)
     {
         _roomCanvas = canvases;
     }
 
-    public void OnClick_LeaveRoom()
+    public void OnClick_StartGame()
     {
-        PhotonNetwork.LeaveRoom(true);
-        _roomCanvas.CurrentRoomCanvas.Hide();
-
+        PhotonNetwork.LoadLevel("GameMenu");
     }
-
-     
 }

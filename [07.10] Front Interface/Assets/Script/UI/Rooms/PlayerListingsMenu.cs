@@ -90,8 +90,8 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
         }
     }
 
-    public void OnClick_StartGame()
+    /*public void OnClick_StartGame()
     {
             PhotonNetwork.LoadLevel("GameMenu");
-    }
+    }*/
 }

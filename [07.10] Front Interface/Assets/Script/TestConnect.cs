@@ -65,8 +65,8 @@ public class TestConnect : MonoBehaviourPunCallbacks
         Debug.Log("Failed to connect to Self-hosted server " + cause.ToString(), this);
     }
 
-    /*public override void OnJoinedLobby()
+    public override void OnJoinedLobby()
     {
         Debug.Log("Joined lobby.");
-    }*/
+    }
 }
