@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5455993400284836632}
   - component: {fileID: 8212800967315981753}
   - component: {fileID: 2456664431630941008}
+  - component: {fileID: 4455229122802074249}
   m_Layer: 0
   m_Name: RoomListing
-  m_TagString: Untagged
+  m_TagString: RoomListing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 5455993401713501946}
+  laserPointer: {fileID: 0}
 --- !u!114 &2456664431630941008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +167,19 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!65 &4455229122802074249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5455993400284836634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 300, y: 100, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5455993401713501940
 GameObject:
   m_ObjectHideFlags: 0

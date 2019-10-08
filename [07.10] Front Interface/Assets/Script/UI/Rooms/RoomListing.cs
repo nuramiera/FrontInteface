@@ -4,11 +4,33 @@ using UnityEngine;
 using Photon.Realtime;
 using UnityEngine.UI;
 using Photon.Pun;
+using Valve.VR.Extras;
+using Valve.VR.InteractionSystem;
 
 public class RoomListing : MonoBehaviour
 {
     [SerializeField]
     private Text _text;
+
+    public SteamVR_LaserPointer laserPointer;
+
+    //public GameObject PanelTesting;
+
+
+    void Awake()
+    {
+        laserPointer.PointerClick += PointerClick;
+    }
+
+    public void PointerClick(object sender, PointerEventArgs e)
+    {
+        if (e.target.name == "RoomListing")
+        {
+            Debug.Log("Room Listing was clicked");
+            OnClick_Button();
+        }
+       
+    }
 
     public RoomInfo RoomInfo { get; private set; }
     
