@@ -5632,6 +5632,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814837043}
   m_CullTransparentMesh: 0
+--- !u!114 &1829152213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5455993401713501946, guid: 5ab6f0e59771fa04fb2d89d87e6a71c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 151121337}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1886022662
 GameObject:
   m_ObjectHideFlags: 0
@@ -5829,6 +5841,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextField: {fileID: 716468572}
+  laserPointer: {fileID: 615128310}
+--- !u!114 &1948952123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948952121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9596b2ba722a3224b8f67606e3662e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 1829152213}
   laserPointer: {fileID: 615128310}
 --- !u!1 &2066974341
 GameObject:
