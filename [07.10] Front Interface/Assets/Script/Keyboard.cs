@@ -282,14 +282,14 @@ public class Keyboard: MonoBehaviour
             JoinRoom.text = JoinRoom.text + "A";
         }*/
 
-        /*if (TextField.IsInteractable())
+        if (TextField.interactable)
         {
             TextField.text = TextField.text + "A";
         }
-        else if (JoinRoom.IsInteractable())
+        else if (JoinRoom.interactable)
         {
             JoinRoom.text = JoinRoom.text + "A";
-        }*/
+        }
     }
 
     /*public void A()
