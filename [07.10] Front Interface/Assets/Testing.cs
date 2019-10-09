@@ -5,7 +5,6 @@ using Photon.Pun;
 using Valve.VR.Extras;
 using Valve.VR.InteractionSystem;
 
-
 public class Testing : MonoBehaviour
 {
     private RoomCanvases _roomCanvas;

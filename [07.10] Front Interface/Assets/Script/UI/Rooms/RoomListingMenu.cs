@@ -4,6 +4,8 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
+using Valve.VR.Extras;
+using Valve.VR.InteractionSystem;
 
 public class RoomListingMenu : MonoBehaviourPunCallbacks
 {
@@ -12,7 +14,8 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
     [SerializeField]
     private RoomListing _roomListing;
 
-    
+    public SteamVR_LaserPointer laserPointer;
+
 
     private List<RoomListing> _listing = new List<RoomListing>();
     private RoomCanvases _roomCanvases;
@@ -20,7 +23,21 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
     public void FirstInitialize(RoomCanvases canvases)
     {
         _roomCanvases = canvases;
-    }   
+    }
+
+    void Awake()
+    {
+        laserPointer.PointerClick += PointerClick;
+    }
+
+    public void PointerClick(object sender, PointerEventArgs e)
+    {
+        if (e.target.name == "RoomListing")
+        {
+            Debug.Log("Room Listing was clicked");
+            _roomListing.OnClick_Button();
+        }
+    }
 
     public override void OnJoinedRoom()
     {

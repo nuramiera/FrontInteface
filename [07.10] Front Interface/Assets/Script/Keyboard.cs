@@ -9,12 +9,23 @@ public class Keyboard: MonoBehaviour
 {
 
     public InputField TextField;
+    public InputField JoinRoom;
+   
     public SteamVR_LaserPointer laserPointer;
     string alphabet;
 
+    public bool Room;
+    public bool Join;
+    
     void Awake()
     {
         laserPointer.PointerClick += PointerClick;
+    }
+
+    public void Start()
+    {
+        TextField.DeactivateInputField();
+        JoinRoom.DeactivateInputField();        
     }
 
     public void PointerClick(object sender, PointerEventArgs e)
@@ -219,12 +230,72 @@ public class Keyboard: MonoBehaviour
             Debug.Log("0 was clicked");
             Zero();
         }
+
+        if (e.target.name == "RoomNameInput")
+        {
+            TextField.ActivateInputField();
+            //Debug.Log("Room Name Input Activated");
+
+            //JoinRoom.DeactivateInputField();
+            //Debug.Log("Join Room Deactive");
+
+            if (TextField.isActiveAndEnabled == true)
+            {
+                Room = true;
+                Join = false;
+                Debug.Log("Room Name Input Activated");
+            }     
+
+
+        }
+        else if (e.target.name == "JoinRoomInput")
+        {
+            //Debug.Log("Join Room Input Activated!");
+            JoinRoom.ActivateInputField();
+            //Debug.Log("Join Room Input Activated");
+
+            //TextField.DeactivateInputField();
+            //Debug.Log("Create Room Deactive");
+
+            if (JoinRoom.isActiveAndEnabled == true)
+            {
+                Join = true;
+                Room = false;
+                Debug.Log("Join Room Input Activated");
+            }            
+        }       
     }
 
     public void A()
     {
-        TextField.text = TextField.text + "A";
+        /*if (TextField.enabled == true)
+        {
+            TextField.text = TextField.text + "A";
+        }
+        /*else if (JoinRoom.isActiveAndEnabled == true || TextField.isActiveAndEnabled == false)
+        {
+            JoinRoom.text = JoinRoom.text + "A";
+        }
+
+        else 
+        {
+            JoinRoom.text = JoinRoom.text + "A";
+        }*/
+
+        /*if (TextField.IsInteractable())
+        {
+            TextField.text = TextField.text + "A";
+        }
+        else if (JoinRoom.IsInteractable())
+        {
+            JoinRoom.text = JoinRoom.text + "A";
+        }*/
     }
+
+    /*public void A()
+    {
+        TextField.text = TextField.text + "A";
+    }*/
 
     public void B()
     {
