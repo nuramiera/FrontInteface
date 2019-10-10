@@ -53,7 +53,7 @@ namespace Photon.Pun.UtilityScripts
         // Being a MonoBehaviourPunCallbacks means, we can override the few methods which are needed here.
 
 
-        public override void OnConnecttoServer()
+        public override void OnConnectedToMaster()
         {
             Debug.Log("OnConnectedToMaster() was called by PUN. Now this client is connected and could join a room. Calling: PhotonNetwork.JoinRandomRoom();");
             PhotonNetwork.JoinRandomRoom();
@@ -84,36 +84,39 @@ namespace Photon.Pun.UtilityScripts
     }
 
 
-#if UNITY_EDITOR
-[CanEditMultipleObjects]
-[CustomEditor(typeof(ConnectAndJoinRandom), true)]
-public class ConnectAndJoinRandomInspector : Editor
-{
-	void OnEnable() { EditorApplication.update += Update; }
-	void OnDisable() { EditorApplication.update -= Update; }
+    //#if UNITY_EDITOR
+    //[CanEditMultipleObjects]
+    //[CustomEditor(typeof(ConnectAndJoinRandom), true)]
+    //public class ConnectAndJoinRandomInspector : Editor
+    //{
+    //    void OnEnable() { EditorApplication.update += Update; }
+    //    void OnDisable() { EditorApplication.update -= Update; }
 
-	bool IsConnectedCache = false;
+    //    bool isConnectedCache = false;
 
-	void Update()
-	{
-		if (IsConnectedCache != PhotonNetwork.IsConnected)
-		{
-			Repaint ();
-		}
-	}
+    //    void Update()
+    //    {
+    //        if (this.isConnectedCache != PhotonNetwork.IsConnected)
+    //        {
+    //            this.Repaint();
+    //        }
+    //    }
 
-    public override void OnInspectorGUI()
-    {
-        this.DrawDefaultInspector(); // Draw the normal inspector
+    //    public override void OnInspectorGUI()
+    //    {
+    //        this.isConnectedCache = !PhotonNetwork.IsConnected;
 
-        if (Application.isPlaying && !PhotonNetwork.IsConnected)
-        {
-            if (GUILayout.Button("Connect"))
-            {
-				((ConnectAndJoinRandom)this.target).ConnectNow ();
-            }
-        }
-    }
-}
-#endif
+
+    //        this.DrawDefaultInspector(); // Draw the normal inspector
+
+    //        if (Application.isPlaying && !PhotonNetwork.IsConnected)
+    //        {
+    //            if (GUILayout.Button("Connect"))
+    //            {
+    //                ((ConnectAndJoinRandom)this.target).ConnectNow();
+    //            }
+    //        }
+    //    }
+    //}
+    //#endif
 }

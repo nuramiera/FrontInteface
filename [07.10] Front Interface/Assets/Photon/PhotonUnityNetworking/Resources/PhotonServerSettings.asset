@@ -22,18 +22,36 @@ MonoBehaviour:
     Server: 192.168.0.103
     Port: 5055
     Protocol: 0
-    EnableLobbyStatistics: 1
-    NetworkLogging: 5
-  StartInOfflineMode: 0
-  PunLogging: 2
-  EnableSupportLogger: 1
+    EnableLobbyStatistics: 0
+    NetworkLogging: 1
+  PunLogging: 0
+  EnableSupportLogger: 0
   RunInBackground: 1
+  StartInOfflineMode: 0
   RpcList:
+  - ClickRpc
+  - DestroyRpc
+  - DestroySpaceship
+  - Fire
+  - RespawnSpaceship
+  - AddInteractable
+  - GetSocket
+  - HeldInteraction
+  - NearestInteraction
+  - RemoveInteractable
+  - StopInteraction
+  - TryInteraction
+  - ApplyHandVelocity
+  - Attach
+  - AttachNewSocket
+  - Detach
+  - EndInteraction
+  - GetAvailability
+  - GetPose
+  - GetStoredObject
+  - Interaction
+  - ReleaseOldSocket
+  - StartInteraction
   - Drop
-  - MoveRig
-  - Pickup
-  - RPC_Function
-  - TryTeleport
-  - UpdatePointer
   DisableAutoOpenWizard: 1
   ShowSettings: 1

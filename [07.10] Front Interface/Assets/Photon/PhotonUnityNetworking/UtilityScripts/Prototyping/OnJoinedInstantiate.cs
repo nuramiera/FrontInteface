@@ -72,7 +72,7 @@ namespace Photon.Pun.UtilityScripts
 		{
 		}
 
-        public void OnConnecttoServer()
+        public void OnConnectedToMaster()
         {
         }
 

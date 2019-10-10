@@ -187,7 +187,7 @@ namespace Photon.Pun.Demo.Cockpit
 					}
 					else
 					{
-						this.OnConnecttoServer ();
+						this.OnConnectedToMaster ();
 					}
 
 				}
@@ -666,7 +666,7 @@ namespace Photon.Pun.Demo.Cockpit
 
         }
 
-        public override void OnConnecttoServer()
+        public override void OnConnectedToMaster()
         {
 			if (debug)  Debug.Log("PunCockpit:OnConnectedToMaster()");
 

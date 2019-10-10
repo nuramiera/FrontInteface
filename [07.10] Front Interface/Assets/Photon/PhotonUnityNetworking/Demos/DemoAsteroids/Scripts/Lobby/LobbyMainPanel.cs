@@ -57,7 +57,7 @@ namespace Photon.Pun.Demo.Asteroids
 
         #region PUN CALLBACKS
 
-        public override void OnConnecttoServer()
+        public override void OnConnectedToMaster()
         {
             this.SetActivePanel(SelectionPanel.name);
         }

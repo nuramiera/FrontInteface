@@ -2,10 +2,10 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.newmultiplayer.exe",
+      "app_key": "application.generated.unity.socket.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "E:\\Users\\Nur Amiera\\Desktop\\GitHub\\FrontInteface\\[07.10] Front Interface\\actions.json",
+      "action_manifest_path": "D:\\Users\\Nabilah Azelan\\Documents\\FrontInteface\\[07.10] Front Interface\\actions.json",
       "strings": {
         "en_us": {
           "name": "[07.10] Front Interface [Testing]"
