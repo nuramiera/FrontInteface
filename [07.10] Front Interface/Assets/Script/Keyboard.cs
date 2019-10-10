@@ -271,194 +271,465 @@ public class Keyboard: MonoBehaviour
 
     public void B()
     {
-        TextField.text = TextField.text + "B";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "B";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "B";
+        }
     }
 
     public void C()
     {
-        TextField.text = TextField.text + "C";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "C";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "C";
+        }
     }
 
     public void D()
     {
-        TextField.text = TextField.text + "D";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "D";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "D";
+        }
     }
 
     public void E()
     {
-        TextField.text = TextField.text + "E";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "E";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "E";
+        }
     }
 
     public void F()
     {
-        TextField.text = TextField.text + "F";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "F";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "F";
+        }
     }
 
     public void G()
     {
-        TextField.text = TextField.text + "G";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "G";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "G";
+        }
     }
 
     public void H()
     {
-        TextField.text = TextField.text + "H";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "H";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "H";
+        }
     }
 
     public void I()
     {
-        TextField.text = TextField.text + "I";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "I";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "I";
+        }
     }
 
     public void J()
     {
-        TextField.text = TextField.text + "J";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "J";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "J";
+        }
     }
 
     public void K()
     {
-        TextField.text = TextField.text + "K";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "K";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "K";
+        }
     }
 
     public void L()
     {
-        TextField.text = TextField.text + "L";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "L";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "L";
+        }
     }
 
     public void M()
     {
-        TextField.text = TextField.text + "M";
-
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "M";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "M";
+        }
     }
 
     public void N()
     {
-        TextField.text = TextField.text + "N";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "N";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "N";
+        }
     }
 
     public void O()
     {
-        TextField.text = TextField.text + "Q";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "O";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "O";
+        }
     }
 
     public void P()
     {
-        TextField.text = TextField.text + "P";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "P";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "P";
+        }
     }
 
     public void Q()
     {
-        TextField.text = TextField.text + "Q";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "Q";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "Q";
+        }
     }
 
     public void R()
     {
-        TextField.text = TextField.text + "R";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "R";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "R";
+        }
     }
 
     public void S()
     {
-        TextField.text = TextField.text + "S";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "S";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "S";
+        }
     }
 
     public void T()
     {
-        TextField.text = TextField.text + "T";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "T";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "T";
+        }
     }
 
     public void U()
     {
-        TextField.text = TextField.text + "U";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "U";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "U";
+        }
     }
 
     public void V()
     {
-        TextField.text = TextField.text + "V";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "V";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "V";
+        }
     }
 
     public void W()
     {
-        TextField.text = TextField.text + "W";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "W";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "W";
+        }
     }
 
     public void X()
     {
-        TextField.text = TextField.text + "X";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "X";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "X";
+        }
     }
 
     public void Y()
     {
-        TextField.text = TextField.text + "Y";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "Y";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "Y";
+        }
     }
 
     public void Z()
     {
-        TextField.text = TextField.text + "Z";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "Z";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "Z";
+        }
     }
 
     public void FullStop()
     {
-        TextField.text = TextField.text + ".";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + ".";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + ".";
+        }
     }
 
     public void Coma()
     {
-        TextField.text = TextField.text + ",";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + ",";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + ",";
+        }
     }
 
     public void BackSpace()
     {
-
-        if (TextField.text.Length > 0) TextField.text = TextField.text.Remove(TextField.text.Length - 1);
+        if (Room == true && Join == false)
+        {
+            if (TextField.text.Length > 0) TextField.text = TextField.text.Remove(TextField.text.Length - 1);
+        }
+        else if (Join == true && Room == false)
+        {
+            if (JoinRoom.text.Length > 0) JoinRoom.text = JoinRoom.text.Remove(JoinRoom.text.Length - 1);
+        }      
 
     }
 
     public void Space()
     {
-        TextField.text = TextField.text + " ";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + " ";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + " ";
+        }
     }
 
     public void One()
     {
-        TextField.text = TextField.text + "1";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "1";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "1";
+        }
     }
 
     public void Two()
     {
-        TextField.text = TextField.text + "2";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "2";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "2";
+        }
     }
 
     public void Three()
     {
-        TextField.text = TextField.text + "3";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "3";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "3";
+        }
     }
     public void Four()
     {
-        TextField.text = TextField.text + "4";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "4";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "4";
+        }
     }
     public void Five()
     {
-        TextField.text = TextField.text + "5";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "5";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "5";
+        }
     }
     public void Six()
     {
-        TextField.text = TextField.text + "6";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "6";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "6";
+        }
 
     }
     public void Seven()
     {
-        TextField.text = TextField.text + "7";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "7";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "7";
+        }
     }
     public void Eight()
     {
-        TextField.text = TextField.text + "8";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "8";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "8";
+        }
     }
     public void Nine()
     {
-        TextField.text = TextField.text + "9";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "9";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "9";
+        }
     }
     public void Zero()
     {
-        TextField.text = TextField.text + "0";
+        if (Room == true && Join == false)
+        {
+            TextField.text = TextField.text + "0";
+        }
+        else if (Join == true && Room == false)
+        {
+            JoinRoom.text = JoinRoom.text + "0";
+        }
     }
 
 }
