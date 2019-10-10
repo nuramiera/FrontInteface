@@ -41,41 +41,7 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
         {
             Debug.Log("Button was clicked : Create Room Menu");
             OnClick_JoinRoom();
-        }
-
-        /*if (e.target.name == "RoomNameInput")
-        {
-            Debug.Log("Room Name Input Activated!");
-            /*_RoomName.ActivateInputField();
-            Debug.Log("Room Name Input Activated");*/
-
-            /*_RoomName.ActivateInputField();
-            _RoomName.Select();
-
-            if (_RoomName.GetComponent<InputField>().isFocused == true)
-            {
-                _RoomName.GetComponent<Image>().color = Color.blue;
-            }
-            if (_RoomName.isFocused)
-            {
-                _RoomName.image.color = Color.red;
-            }
-
-
-        }
-        else if (e.target.name == "JoinRoomInput")
-        {
-            Debug.Log("Join Room Input Activated!");
-            /*_JoinRoom.ActivateInputField();
-            Debug.Log("Join Room Input Activated");*/
-            /*_JoinRoom.ActivateInputField();
-            _JoinRoom.Select();
-            if (_JoinRoom.GetComponent<InputField>().isFocused == true)
-            {
-                _JoinRoom.GetComponent<Image>().color = Color.green;
-            }
-        }*/
-        
+        }        
     }
 
     public void FirstInitialize(RoomCanvases canvases)
@@ -111,7 +77,7 @@ public class CreateRoomMenu : MonoBehaviourPunCallbacks
 
     public void OnClick_JoinRoom()
     {
-        PhotonNetwork.JoinRoom(_RoomName.text,null);
+        PhotonNetwork.JoinRoom(_JoinRoom.text,null);
         Debug.Log("Join Room Success !");
 
     }

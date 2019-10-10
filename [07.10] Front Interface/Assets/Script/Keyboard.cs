@@ -22,12 +22,6 @@ public class Keyboard: MonoBehaviour
         laserPointer.PointerClick += PointerClick;
     }
 
-    public void Start()
-    {
-        TextField.DeactivateInputField();
-        JoinRoom.DeactivateInputField();        
-    }
-
     public void PointerClick(object sender, PointerEventArgs e)
     {
         if (e.target.name == "A")
@@ -234,12 +228,13 @@ public class Keyboard: MonoBehaviour
         if (e.target.name == "RoomNameInput")
         {
             TextField.ActivateInputField();
-            
+            JoinRoom.DeactivateInputField();
+
             if (TextField.isActiveAndEnabled == true)
-            {
-                JoinRoom.DeactivateInputField();
-                Debug.Log("Join Room is deactive" + JoinRoom.isActiveAndEnabled);                
+            {                
+                Debug.Log("Join Room is deactive  " + JoinRoom.isActiveAndEnabled);                
                 Debug.Log("Room Name Input Activated" + TextField.isActiveAndEnabled);
+                Debug.Log("Room Name is enable" + (TextField.enabled == true));
                 Room = true;
                 Join = false;
             }     
@@ -247,34 +242,32 @@ public class Keyboard: MonoBehaviour
         else if (e.target.name == "JoinRoomInput")
         {
             JoinRoom.ActivateInputField();
+            TextField.DeactivateInputField();
 
             if (JoinRoom.isActiveAndEnabled == true)
-            {
-                TextField.DeactivateInputField();
-                Debug.Log("Room Name is deactive" + TextField.isActiveAndEnabled);
+            {                
+                Debug.Log("Room Name is deactive = " + TextField.isActiveAndEnabled);                
                 Debug.Log("Join Room Input Activated" + JoinRoom.isActiveAndEnabled);
+
                 Room = false;
                 Join = true;
             }
         }       
     }
 
+   
     public void A()
     {
-        if (TextField.isActiveAndEnabled == true)
-        {
+        
+        if (Room == true && Join == false)
+        {           
             TextField.text = TextField.text + "A";
         }
-        else if (JoinRoom.isActiveAndEnabled == true)
+        else if (Join == true && Room == false)
         {
             JoinRoom.text = JoinRoom.text + "A";
         }
     }
-
-    /*public void A()
-    {
-        TextField.text = TextField.text + "A";
-    }*/
 
     public void B()
     {
