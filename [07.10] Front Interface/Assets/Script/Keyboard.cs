@@ -234,59 +234,38 @@ public class Keyboard: MonoBehaviour
         if (e.target.name == "RoomNameInput")
         {
             TextField.ActivateInputField();
-            //Debug.Log("Room Name Input Activated");
-
-            //JoinRoom.DeactivateInputField();
-            //Debug.Log("Join Room Deactive");
-
+            
             if (TextField.isActiveAndEnabled == true)
             {
+                JoinRoom.DeactivateInputField();
+                Debug.Log("Join Room is deactive" + JoinRoom.isActiveAndEnabled);                
+                Debug.Log("Room Name Input Activated" + TextField.isActiveAndEnabled);
                 Room = true;
                 Join = false;
-                Debug.Log("Room Name Input Activated");
             }     
-
-
         }
         else if (e.target.name == "JoinRoomInput")
         {
-            //Debug.Log("Join Room Input Activated!");
             JoinRoom.ActivateInputField();
-            //Debug.Log("Join Room Input Activated");
-
-            //TextField.DeactivateInputField();
-            //Debug.Log("Create Room Deactive");
 
             if (JoinRoom.isActiveAndEnabled == true)
             {
-                Join = true;
+                TextField.DeactivateInputField();
+                Debug.Log("Room Name is deactive" + TextField.isActiveAndEnabled);
+                Debug.Log("Join Room Input Activated" + JoinRoom.isActiveAndEnabled);
                 Room = false;
-                Debug.Log("Join Room Input Activated");
-            }            
+                Join = true;
+            }
         }       
     }
 
     public void A()
     {
-        /*if (TextField.enabled == true)
+        if (TextField.isActiveAndEnabled == true)
         {
             TextField.text = TextField.text + "A";
         }
-        /*else if (JoinRoom.isActiveAndEnabled == true || TextField.isActiveAndEnabled == false)
-        {
-            JoinRoom.text = JoinRoom.text + "A";
-        }
-
-        else 
-        {
-            JoinRoom.text = JoinRoom.text + "A";
-        }*/
-
-        if (TextField.interactable)
-        {
-            TextField.text = TextField.text + "A";
-        }
-        else if (JoinRoom.interactable)
+        else if (JoinRoom.isActiveAndEnabled == true)
         {
             JoinRoom.text = JoinRoom.text + "A";
         }
